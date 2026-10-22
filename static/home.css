@@ -1,0 +1,880 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #f8f8f8;
+color: #171717;
+}
+
+button {
+cursor: pointer;
+border: none;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* ================= HEADER ================= */
+
+header {
+height: 75px;
+background: #ffffff;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 7%;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+font-size: 25px;
+font-weight: 800;
+}
+
+.logo i {
+margin-right: 7px;
+}
+
+.logo span {
+color: #e63946;
+}
+
+nav {
+display: flex;
+gap: 35px;
+}
+
+nav a {
+font-size: 15px;
+font-weight: 600;
+transition: 0.3s;
+}
+
+nav a {
+color: #e63946;
+}
+
+.header-icons {
+display: flex;
+align-items: center;
+gap: 18px;
+}
+
+.header-icons button {
+background: transparent;
+font-size: 19px;
+position: relative;
+}
+
+.header-icons span {
+position: absolute;
+top: -10px;
+right: -10px;
+background: #e63946;
+color: white;
+font-size: 10px;
+width: 18px;
+height: 18px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.menu-btn {
+display: none;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box {
+position: fixed;
+top: 75px;
+left: 0;
+width: 100%;
+background: white;
+padding: 20px 8%;
+display: none;
+z-index: 999;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.search-box.active {
+display: flex;
+}
+
+.search-box input {
+flex: 1;
+padding: 15px;
+border: 1px solid #ddd;
+outline: none;
+font-size: 16px;
+}
+
+.search-box button {
+width: 55px;
+background: #171717;
+color: white;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+min-height: 650px;
+display: flex;
+align-items: center;
+padding: 80px 8%;
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,0.85),
+rgba(0,0,0,0.3),
+rgba(0,0,0,0)
+),
+/* url("images/image.png"); */
+url("image/bull street fashion.jpeg");
+
+
+background-size: cover;
+background-position: top;
+color: white;
+
+}
+
+.hero-content {
+max-width: 600px;
+}
+
+.small-title {
+color: #e63946;
+font-size: 14px;
+font-weight: bold;
+letter-spacing: 2px;
+margin-bottom: 15px;
+}
+
+.hero h1 {
+font-size: 65px;
+line-height: 1.05;
+margin-bottom: 25px;
+}
+
+.hero h1 span {
+color: #e63946;
+}
+
+.hero .small-title{
+font-size: 18px;
+line-height: 1.7;
+margin-bottom: 30px;
+}
+
+.shop-btn {
+margin-top: 10px;
+display: inline-flex;
+gap: 12px;
+align-items: center;
+background: #e63946;
+padding: 15px 25px;
+color: white;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.shop-btn {
+background: #c92835;
+transform: translateY(-2px);
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+padding: 90px 8%;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 45px;
+}
+
+.section-title p {
+color: #e63946;
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+.section-title h2 {
+font-size: 38px;
+margin-top: 10px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.category-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+
+.category-card {
+background: white;
+text-align: center;
+padding: 35px 20px;
+border-radius: 10px;
+transition: 0.3s;
+cursor: pointer;
+box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.category-card {
+transform: translateY(-8px);
+}
+
+.category-icon {
+width: 70px;
+height: 70px;
+margin: auto;
+border-radius: 50%;
+background: #fce8e9;
+color: #e63946;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 28px;
+margin-bottom: 18px;
+}
+
+.category-card h3 {
+margin-bottom: 8px;
+}
+
+.category-card p {
+color: #777;
+}
+
+/* ================= FILTER ================= */
+
+.filter-buttons {
+display: flex;
+justify-content: center;
+gap: 12px;
+margin-bottom: 40px;
+flex-wrap: wrap;
+}
+
+.filter {
+background: white;
+padding: 11px 22px;
+border-radius: 25px;
+border: 1px solid #ddd;
+font-weight: 600;
+}
+
+.filter.active,
+.filter {
+background: #171717;
+color: white;
+}
+
+/* ================= PRODUCTS ================= */
+
+.product-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+}
+
+.product-card {
+background: white;
+border-radius: 10px;
+overflow: hidden;
+position: relative;
+transition: 0.3s;
+box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.product-card {
+transform: translateY(-6px);
+}
+
+.product-image {
+height: 300px;
+position: relative;
+overflow: hidden;
+}
+
+.product-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: 0.5s;
+}
+
+.product-card .product-image img {
+transform: scale(1.06);
+}
+
+.wishlist {
+position: absolute;
+top: 15px;
+right: 15px;
+width: 38px;
+height: 38px;
+background: white;
+border-radius: 50%;
+font-size: 17px;
+}
+
+.wishlist.liked {
+color: #e63946;
+}
+
+.product-info {
+padding: 20px;
+}
+
+.product-category {
+font-size: 12px;
+color: #888;
+}
+
+.product-info h3 {
+margin: 8px 0;
+font-size: 18px;
+}
+
+.rating {
+color: #f4b400;
+font-size: 13px;
+}
+
+.price {
+font-size: 20px;
+font-weight: bold;
+margin: 12px 0;
+}
+
+.old-price {
+color: #999;
+text-decoration: line-through;
+font-size: 14px;
+margin-left: 7px;
+font-weight: normal;
+}
+
+.add-cart {
+width: 100%;
+padding: 12px;
+background: #171717;
+color: white;
+font-weight: bold;
+border-radius: 5px;
+}
+
+.add-cart {
+background: #e63946;
+}
+
+/* ================= OFFER ================= */
+
+.offer {
+background:
+linear-gradient(
+rgba(0,0,0,0.72),
+rgba(0,0,0,0.72)
+),
+url("image/bull street fashion 2.jpeg");
+/* url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80"); */
+
+background-size: cover;
+background-position: center;
+text-align: center;
+color: white;
+
+}
+
+.offer-content p {
+color: #e63946;
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+.offer h2 {
+font-size: 45px;
+margin: 15px 0 25px;
+}
+
+.offer button {
+background: #e63946;
+color: white;
+padding: 14px 25px;
+font-weight: bold;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 70px;
+align-items: center;
+}
+
+.about-image {
+min-height: 450px;
+background:
+url("image/bull street fashion.jpeg");
+/* url("https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=900&q=80"); */
+background-size: cover;
+background-position: top;
+border-radius: 10px;
+}
+
+.about-box {
+background: #e63946;
+color: white;
+width: 100px;
+height: 100px;
+margin: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 40px;
+}
+
+.about-content h2 {
+font-size: 42px;
+margin-bottom: 20px;
+}
+
+.about-content h2 span {
+color: #e63946;
+}
+
+.about-content > .small-title {
+color: #666;
+line-height: 1.8;
+}
+
+.features {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+margin-top: 25px;
+}
+
+.features div {
+display: flex;
+align-items: center;
+gap: 10px;
+font-weight: 600;
+}
+
+.features i {
+color: #e63946;
+}
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter {
+background: #171717;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 30px;
+}
+
+.newsletter h2 {
+margin: 8px 0;
+}
+
+.newsletter p {
+color: #aaa;
+}
+
+.newsletter form {
+display: flex;
+min-width: 450px;
+}
+
+.newsletter input {
+flex: 1;
+padding: 15px;
+border: none;
+outline: none;
+}
+
+.newsletter button {
+background: #e63946;
+color: white;
+padding: 0 25px;
+font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+background: #0d0d0d;
+color: white;
+padding: 65px 8% 20px;
+}
+
+.footer-container {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr 1.5fr;
+gap: 50px;
+}
+
+.footer-col > p {
+color: #999;
+line-height: 1.7;
+margin-top: 15px;
+}
+
+.footer-col h3 {
+margin-bottom: 20px;
+}
+
+.footer-col > a {
+display: block;
+color: #999;
+margin-bottom: 12px;
+}
+
+.footer-col > a {
+color: white;
+}
+
+.footer-col p i {
+width: 25px;
+color: #e63946;
+}
+
+.social-icons {
+display: flex;
+gap: 12px;
+margin-top: 20px;
+}
+
+.social-icons .iconsss {
+width: 38px;
+height: 38px;
+border: 1px solid #444;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+background: #e63946;
+border-color: #e63946;
+}
+
+
+
+.social-icons p{
+    margin-top: 10px;
+    color: rgb(89, 89, 244);
+}
+
+.copyright {
+border-top: 1px solid #333;
+margin-top: 45px;
+padding-top: 20px;
+text-align: center;
+color: #777;
+}
+
+/* ================= CART ================= */
+
+.overlay {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.5);
+z-index: 1500;
+display: none;
+}
+
+.overlay.active {
+display: block;
+}
+
+.cart-sidebar {
+position: fixed;
+right: -450px;
+top: 0;
+width: 420px;
+max-width: 100%;
+height: 100vh;
+background: white;
+z-index: 1600;
+transition: 0.4s;
+display: flex;
+flex-direction: column;
+}
+
+.cart-sidebar.active {
+right: 0;
+}
+
+.cart-header {
+padding: 25px;
+display: flex;
+justify-content: space-between;
+border-bottom: 1px solid #ddd;
+}
+
+.cart-header button {
+background: transparent;
+font-size: 22px;
+}
+
+.cart-items {
+padding: 20px;
+flex: 1;
+overflow-y: auto;
+}
+
+.empty-cart {
+text-align: center;
+color: #888;
+margin-top: 50px;
+}
+
+.cart-item {
+display: flex;
+gap: 15px;
+margin-bottom: 20px;
+border-bottom: 1px solid #eee;
+padding-bottom: 20px;
+}
+
+.cart-item img {
+width: 75px;
+height: 85px;
+object-fit: cover;
+}
+
+.cart-item-info {
+flex: 1;
+}
+
+.cart-item-info h4 {
+margin-bottom: 8px;
+}
+
+.quantity {
+display: flex;
+gap: 10px;
+align-items: center;
+margin-top: 10px;
+}
+
+.quantity button {
+width: 25px;
+height: 25px;
+background: #eee;
+}
+
+.remove-item {
+color: #e63946;
+background: transparent;
+}
+
+.cart-bottom {
+padding: 25px;
+border-top: 1px solid #ddd;
+}
+
+.total {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+font-size: 20px;
+}
+
+.checkout-btn {
+width: 100%;
+padding: 15px;
+background: #e63946;
+color: white;
+font-weight: bold;
+}
+
+/* ================= TOAST ================= */
+
+.toast {
+position: fixed;
+right: 25px;
+bottom: 25px;
+background: #171717;
+color: white;
+padding: 15px 22px;
+border-radius: 5px;
+display: flex;
+gap: 10px;
+transform: translateY(100px);
+opacity: 0;
+transition: 0.3s;
+z-index: 2000;
+}
+
+.toast.show {
+transform: translateY(0);
+opacity: 1;
+}
+
+.toast i {
+color: #4caf50;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+nav {
+    gap: 15px;
+}
+
+.product-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.category-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+}
+
+@media (max-width: 700px) {
+
+header {
+    padding: 0 5%;
+}
+
+nav {
+    position: absolute;
+    top: 75px;
+    left: -100%;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 25px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+nav.active {
+    left: 0;
+}
+
+.menu-btn {
+    display: block;
+}
+
+.hero {
+    min-height: 550px;
+    padding: 60px 6%;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+section {
+    padding: 65px 6%;
+}
+
+.category-container,
+.product-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.product-image {
+    height: 230px;
+}
+
+.about {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+.about-content h2 {
+    font-size: 35px;
+}
+
+.newsletter form {
+    min-width: 100%;
+}
+
+.footer-container {
+    grid-template-columns: 1fr;
+}
+
+}
+
+@media (max-width: 450px) {
+
+.header-icons {
+    gap: 10px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.header-icons button {
+    font-size: 16px;
+}
+
+.category-container,
+.product-container {
+    grid-template-columns: 1fr;
+}
+
+.hero h1 {
+    font-size: 38px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+}
+
+.offer h2 {
+    font-size: 32px;
+}
+
+.newsletter form {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter input,
+.newsletter button {
+    height: 50px;
+}
+
+}
