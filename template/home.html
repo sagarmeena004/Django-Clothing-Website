@@ -1,0 +1,405 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Bull Street Fashion - Men's Fashion Store</title>
+
+<link rel="stylesheet" href={% static "home.css" %}>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head> 
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header> <div class="logo"> <i class="C:\Users\raghv\Downloads\WhatsApp Image 2026-08-28 at 11.50.08 PM.jpeg"></i> Bull Street <span>Fashion</span> </div>
+
+<nav id="navbar">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#categories">Categories</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="header-icons">
+    <button id="searchBtn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+    <button id="wishlistBtn">
+        <i class="fa-regular fa-heart"></i>
+        <span id="wishlistCount">0</span>
+    </button>
+
+    <button id="cartBtn">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cartCount">0</span>
+    </button>
+
+    <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</div>
+
+</header>
+
+<!-- ================= SEARCH BOX ================= -->
+
+<div class="search-box" id="searchBox"> <input type="text" id="searchInput" placeholder="Search shirts, jeans, watch, wallets...">
+
+<button id="closeSearch">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+
+</div>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <p class="small-title">NEW COLLECTION 2026</p>
+
+    <h1>
+        Upgrade Your
+        <span>Style</span>
+    </h1>
+
+    <p>
+        Discover premium men's fashion designed
+        for confidence, comfort and everyday style.
+    </p>
+
+    <a href="#shop" class="shop-btn">
+        Shop Now
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+</div>
+
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories" id="categories">
+
+<div class="section-title">
+    <p>SHOP BY CATEGORY</p>
+    <h2>Find Your Style</h2>
+</div>
+
+<div class="category-container">
+
+    <div class="category-card" data-category="Shirts">
+        <div class="category-icon">
+            <i class="fa-solid fa-shirt"></i>
+        </div>
+        <h3>Shirts</h3>
+        <p>Classic & Casual</p>
+    </div>
+
+    <div class="category-card" data-category="T-Shirts">
+        <div class="category-icon">
+            <i class="fa-solid fa-shirt"></i>
+        </div>
+        <h3>T-Shirts</h3>
+        <p>Comfortable & Cool</p>
+    </div>
+
+    <div class="category-card" data-category="Jeans">
+        <div class="category-icon">
+            <i class="fa-solid fa-person"></i>
+        </div>
+        <h3>Jeans</h3>
+        <p>Denim Collection</p>
+    </div>
+
+    <div class="category-card" data-category="Accesories">
+        <div class="category-icon">
+            <i class="fa-solid fa-shoe-prints"></i>
+        </div>
+        <h3>Accesories</h3>
+        <p>looking stylish</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products" id="shop">
+
+<div class="section-title">
+    <p>OUR COLLECTION</p>
+    <h2>Trending Products</h2>
+</div>
+
+<div class="filter-buttons">
+
+    <button class="filter active" data-filter="All">
+        All
+    </button>
+
+    <button class="filter" data-filter="Shirts">
+        Shirts
+    </button>
+
+    <button class="filter" data-filter="T-Shirts">
+        T-Shirts
+    </button>
+
+    <button class="filter" data-filter="Jeans">
+        Jeans
+    </button>
+
+    <button class="filter" data-filter="Accesories">
+        Accesories
+    </button>
+
+</div>
+
+<div class="product-container" id="productContainer">
+    <!-- Products inserted using JavaScript -->
+</div>
+
+</section>
+
+<!-- ================= OFFER ================= -->
+
+<section class="offer">
+
+<div class="offer-content">
+
+    <p>LIMITED TIME OFFER</p>
+
+    <h2>
+        Get 30% OFF
+        <br>
+        On Your First Order
+    </h2>
+
+    <button onclick="scrollToShop()">
+        Shop Collection
+    </button>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+<div class="about-image">
+    <div class="about-box">
+        <i class="fa-solid fa-shirt"></i>
+    </div>
+</div>
+
+<div class="about-content">
+
+    <p class="small-title">ABOUT BULL STREET FASHION</p>
+
+    <h2>
+        Fashion That
+        <span>Defines You</span>
+    </h2>
+
+    <p>
+        Bull Street Fashion brings modern men's fashion together
+        in one place. From everyday essentials to
+        statement pieces, our collection is designed
+        for today's confident man.
+    </p>
+
+    <div class="features">
+
+        <div>
+            <i class="fa-solid fa-check"></i>
+            <span>Premium Quality</span>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-check"></i>
+            <span>Affordable Prices</span>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-check"></i>
+            <span>Easy Returns</span>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-check"></i>
+            <span>Fast Delivery</span>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+<div>
+    <p>STAY IN STYLE</p>
+
+    <h2>
+        Subscribe for Latest Offers
+    </h2>
+
+    <p>
+        Get exclusive deals and new collection updates.
+    </p>
+</div>
+
+<form id="newsletterForm">
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        required>
+
+    <button type="submit">
+        Subscribe
+    </button>
+
+</form>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+<div class="footer-container">
+
+    <div class="footer-col">
+
+        <div class="logo">
+            <i class="fa-solid fa-shirt"></i>
+            Bull Street <span>Fashion</span>
+        </div>
+
+        <p>
+            Modern men's fashion for every occasion.
+            Look good. Feel confident.
+        </p>
+
+        <div class="social-icons">
+
+            <a class="iconsss" href="https://www.instagram.com/bull_street_fashion?igsi=a21uZTV4MHZxemQy&utm_source=qr">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <p><a href="https://www.instagram.com/bull_street_fashion?igsi=a21uZTV4MHZxemQy&utm_source=qr">@bull_street_fashion</a></p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-col">
+
+        <h3>Quick Links</h3>
+
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About Us</a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+        <h3>Categories</h3>
+
+        <a href="#shop">Shirts</a>
+        <a href="#shop">T-Shirts</a>
+        <a href="#shop">Jeans</a>
+        <a href="#shop">Accesories</a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+        <h3>Contact</h3>
+
+        <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Minal,Bhopal India
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 9303647670
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="">yourchoiceone1@gmail.com</a>
+        </p>
+
+    </div>
+
+</div>
+
+<div class="copyright">
+    © 2026 Bull Street Fashion. All Rights Reserved.
+</div>
+
+</footer>
+
+<!-- ================= CART SIDEBAR ================= -->
+
+<div class="overlay" id="overlay"></div>
+
+<div class="cart-sidebar" id="cartSidebar">
+
+<div class="cart-header">
+
+    <h2>Your Cart</h2>
+
+    <button id="closeCart">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+</div>
+
+<div class="cart-items" id="cartItems">
+    <p class="empty-cart">
+        Your cart is empty.
+    </p>
+</div>
+
+<div class="cart-bottom">
+
+    <div class="total">
+        <span>Total</span>
+        <strong id="cartTotal">₹0</strong>
+    </div>
+
+    <button class="checkout-btn" id="checkoutBtn">
+        Proceed to Checkout
+    </button>
+
+</div>
+
+</div>
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast"> <i class="fa-solid fa-check"></i> <span>Product added to cart!</span> </div>
+
+
+<script src="{% static 'home.js' %}"></script>
+</body> 
+</html>
